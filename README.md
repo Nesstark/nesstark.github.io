@@ -1,6 +1,0 @@
-Personal website for personal uses, going to include:
-
-   1. Portfolio
-   2. Random stuff
-
-Can be found here:
