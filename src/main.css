@@ -39,7 +39,7 @@ nav ul {
 nav li {
     display: inline-block;
     margin-left: 40px;
-    line-height: 50px;
+    line-height: 120px;
 
     position: relative;
 }
