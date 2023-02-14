@@ -71,3 +71,11 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+    }    
