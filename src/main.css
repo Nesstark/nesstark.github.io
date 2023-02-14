@@ -78,4 +78,8 @@ nav a:hover::before {
     grid-template-rows: 1fr;
     grid-column-gap: 1px;
     grid-row-gap: 0px;
-    }    
+    }
+    
+    .div1 { grid-area: 1 / 2 / 2 / 4; }
+    .div2 { grid-area: 1 / 5 / 2 / 7; }
+    
