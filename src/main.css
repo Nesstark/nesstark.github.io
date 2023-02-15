@@ -74,13 +74,14 @@ nav a:hover::before {
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
     
-    .div1 { grid-area: 1 / 2 / 2 / 6; }
-    .div2 { grid-area: 1 / 7 / 2 / 11; }
+    .div1 { grid-area: 1 / 1 / 2 / 4; }
+    .div2 { grid-area: 1 / 5 / 2 / 7; }
+    
     
     
