@@ -82,31 +82,3 @@ nav a:hover::before {
     
     .div1 { grid-area: 1 / 1 / 2 / 4; }
     .div2 { grid-area: 1 / 5 / 2 / 7; }
-
-/*
-
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: grey;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: whitesmoke;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-    
-    
