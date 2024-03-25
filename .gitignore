@@ -1,0 +1,6 @@
+# editors
+.vscode
+**/DS_Store
+
+# temporary files
+**/__pycache__
