@@ -1,7 +1,16 @@
 /* reset css */
 *, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
 
+html, body {
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 /* custom rules */
@@ -9,11 +18,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "gastromond", sans-serif;
     font-weight: normal;
     color: #2b2b2b;
-}
-
-p {
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    font-weight: normal;;
 }
 
 a {
@@ -31,13 +35,6 @@ a:hover {
     color: white;
 }
 
-main {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 10px;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
 
 /* alignment classes */
 .center {
@@ -60,15 +57,8 @@ main {
 }
 
 .page {
+    display: flex;
+    flex-flow: row wrap;
     padding: 5vw;
     gap: 5vw;
-    display: grid;
-    grid-template: "header main main main main main main main main main";
-}
-@media only screen and (max-width: 600px) {
-    .page {
-        grid-template: 
-            "header" 
-            "main";
-    }
 }
