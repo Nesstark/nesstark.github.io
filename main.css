@@ -1,11 +1,20 @@
 /* Windows 95 Monochromatic Theme */
 :root {
-    --primary-background: #c0c0c0;
-    --window-background: #ffffff;
+    --primary-background: #faf9f5;
+    --window-background: #f0eee6;
     --border-light: #ffffff;
     --border-dark: #808080;
-    --text-color: #000000;
+    --text-color: #141413;
     --highlight-color: #000080;
+}
+
+@font-face {
+    font-family: "TiemposText";
+    src: url(assets/TiemposText.woff) format("woff");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
 }
 
 * {
