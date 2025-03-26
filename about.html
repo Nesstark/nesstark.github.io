@@ -1,67 +1,236 @@
 <!DOCTYPE html>
 <html lang="da-dk">
-
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="button.css" />
     <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #c0c0c0;
+            overflow: hidden;
+        }
+
+        .desktop {
+            position: relative;
+            width: 100vw;
+            height: calc(100vh - 30px);
+            overflow: hidden;
+        }
+
+        .window {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #c0c0c0;
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .window-title {
+            background-color: #000080;
+            color: white;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 5px;
+        }
+
+        .window-control-btn {
+            width: 16px;
+            height: 16px;
+            background-color: #c0c0c0;
+            border: 1px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .window-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: #808080 #c0c0c0;
+        }
+
+        .window-content::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .window-content::-webkit-scrollbar-track {
+            background: #c0c0c0;
+        }
+
+        .window-content::-webkit-scrollbar-thumb {
+            background-color: #808080;
+            border: 3px solid #c0c0c0;
+            border-radius: 6px;
+        }
+
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: #c0c0c0;
+            border-top: 2px solid #ffffff;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .start-button {
+            background-color: #c0c0c0;
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+            padding: 2px 10px;
+            margin-left: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .start-menu {
+            position: absolute;
+            bottom: 30px;
+            left: 5px;
+            width: 200px;
+            background-color: #c0c0c0;
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+            display: none;
+        }
+
+        .start-menu.active {
+            display: block;
+        }
+
+        .start-menu-item {
+            padding: 5px 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #808080;
+        }
+
+        .start-menu-item:hover {
+            background-color: #000080;
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .window-content {
+                padding: 10px;
+            }
+
+            .start-menu {
+                width: 150px;
+            }
+        }
+    </style>
 </head>
-
-<body class="row" style="gap: 5vw; padding: 5vw;">
-    <header>
-        <h2 style="margin-top: 9px; margin-bottom: 20px;">Emil Madsen</h2>
-        <nav class="column" style="gap: 15px;">
-            <a href="/index.html">Home</a>
-            <a href="/about.html">· About</a>
-            <a href="/projects.html">Projects</a>
-            <a href="/portfolio.html">Portfolio</a>
-        </nav>
-    </header>
-
-    <main class="column" style="max-width: 60vw;">
-        <h1 style="margin-bottom: 20px;">About</h1>
-        <article>
-            <h2 style="margin-bottom: 5px;">Welcome</h2>
-            <h4 style="margin-bottom: 10px;">I'm Emil Madsen</h4>
-            <p>
-                I am a university student currently studying Medialogy at Aalborg University in Copenhagen.
-                I enrolled in August 2023.
-            </p>
-            <p style="margin-top: 8px;">
-                With this education, I'll explore human-machine interaction, tackling societal issues with technology. 
-                From design to prototyping, topics include programming, VR, AI, game development, and interaction design.
-            </p>
+<body>
+    <div class="desktop">
+        <div class="window">
+            <div class="window-title">
+                <span>About</span>
+                <div class="window-controls">
+                    <div class="window-control-btn">-</div>
+                    <div class="window-control-btn">□</div>
+                    <div class="window-control-btn">x</div>
+                </div>
+            </div>
             
-            <button class="button" type="button" style="margin-top: 25px;" onclick="window.location.href='assets/Emil_Madsen_CV.pdf'" download>
-                <span class="button__text">CV/Resume</span>
-                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
-              </button>
+            <div class="window-content">
+                <div class="content-container">
+                    <h1>About Me</h1>
+                    <p>I am a university student currently studying Medialogy at Aalborg University in Copenhagen. I enrolled in August 2023.</p>
+                    
+                    <h2>Professional Background</h2>
+                    <p>In my professional journey, I've acquired a diverse skill set, which includes proficiency in several programming languages such as C#, C++, and Python. I am skilled in game development, using both Unity and Unreal Engine.</p>
+                    
+                    <h2>Education</h2>
+                    <p>I am pursuing a degree in Medialogi at Aalborg University in Copenhagen. My academic journey is fueled by a strong desire to deepen my knowledge and expertise.</p>
+                    
+                    <h2>Personal Interests</h2>
+                    <p>Beyond the professional sphere, I have a keen interest in photography and photo editing, often spending my free time perfecting images using Adobe Lightroom. I'm also an avid video gamer and have a deep-seated passion for technology.</p>
+                    
+                    <h2>Additional Skills</h2>
+                    <p>My technical skills extend beyond programming. I'm proficient in various software tools, including Microsoft Office suite, Adobe Creative Cloud, and various game development platforms.</p>
+                    
+                    <h2>Future Aspirations</h2>
+                    <p>I aim to continue expanding my knowledge in human-machine interaction, exploring innovative ways technology can solve complex societal challenges.</p>
+                </div>
+            </div>
+            
+            <style>
+                .window-content {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    text-align: left;
+                    height: 100%;
+                    padding-top: 10px;
+                }
+            
+                .content-container {
+                    width: 66.66%; /* Now spans 2/3 of the screen */
+                    word-wrap: break-word;
+                    margin-left: 0%; /* Starts at the left side of the screen */
+                }
+            </style>
+            
 
-            <h4 style="margin-top: 25px; margin-bottom: 15px;">About me</h4>
-            <p>
-                Hi, I'm Emil Madsen, a passionate and driven individual hailing from the beautiful country of Denmark. Currently, I'm balancing my studies and work as a student assistant at Banedanmark.
-            </p>
-            <h4 style="margin-top: 15px; margin-bottom: 15px;">Professional Background</h4>
-            <p>
-                In my professional journey, I’ve acquired a diverse skill set, which you can explore in detail on my CV. Highlights include proficiency in several programming languages such as C#, C++, and Python, skills I’ve honed both through personal enjoyment and my ongoing Bachelor's degree. 
-                I am also skilled in game development, with experience using both Unity and Unreal Engine. 
-                My expertise extends to a wide range of Microsoft applications, including Excel, Word, and SharePoint, where I can create efficient and organized workflows.
-            </p>
-            <h4 style="margin-top: 15px; margin-bottom: 15px;">Education</h4>
-            <p>
-                I am pursuing a degree in Medialogi at Aalborg University in Copenhagen. 
-                My academic journey is fueled by a strong desire to deepen my knowledge and expertise, aiming to further my studies with a Master’s Degree at Danmarks Teknologiske Institut (DTU) or one at IT-University Copenhagen (ITU).
-            </p>
-            <h4 style="margin-top: 15px; margin-bottom: 15px;">Personal Interests and Hobbies</h4>
-            <p>
-                Beyond the professional sphere, I have a keen interest in photography and photo editing, often spending my free time perfecting images using Adobe Lightroom. 
-                I’m also an avid video gamer and have a deep-seated passion for all things technology. 
-                This curiosity and enthusiasm drive both my personal and professional growth, constantly pushing me to explore and learn more.
-            </p>
-            <div style="height: 50px;"></div>
-        </article>
-    </main>
+    <div class="taskbar">
+        <div class="start-button" onclick="toggleStartMenu()">Start</div>
+        <div class="start-menu" id="startMenu">
+            <div class="start-menu-item" onclick="navigateTo('index.html')">Home</div>
+            <div class="start-menu-item" onclick="navigateTo('about.html')">About</div>
+            <div class="start-menu-item" onclick="navigateTo('projects.html')">Projects</div>
+            <div class="start-menu-item" onclick="navigateTo('portfolio.html')">Portfolio</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleStartMenu() {
+            const startMenu = document.getElementById('startMenu');
+            startMenu.classList.toggle('active');
+        }
+
+        function navigateTo(page) {
+            window.location.href = page;
+            toggleStartMenu(); // Close menu after selection
+        }
+
+        // Close start menu if clicked outside
+        document.addEventListener('click', function(event) {
+            const startMenu = document.getElementById('startMenu');
+            const startButton = document.querySelector('.start-button');
+            
+            if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
+                startMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
-
 </html>
