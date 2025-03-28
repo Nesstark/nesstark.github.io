@@ -128,9 +128,9 @@ html, body {
 
 /* Content Container */
 .content-container {
-    width: 66.66%; /* Spans 2/3 of the screen */
+    width: 80%; /* Leaves 20% padding on each side */
+    margin: 0 auto; /* Centers the container */
     word-wrap: break-word;
-    margin-left: 0%; /* Starts at the left side of the screen */
 }
 
 /* Project Box */
