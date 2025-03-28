@@ -33,6 +33,7 @@
     --border-dark: var(--color-slate-light);
     --text-color: var(--color-slate-dark);
     --highlight-color: var(--color-sky);
+    --highlight-text-colour: var(--color-fig);
 }
 
 /* Font Declarations */
@@ -197,3 +198,13 @@ a:hover {
 ::-webkit-scrollbar-thumb:active {
     background-color: var(--border-dark);
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--text-color);
+    background: var(--highlight-text-colour);
+  }
+  
+  ::selection {
+    color: var(--text-color);
+    background: var(--highlight-text-colour);
+  }
