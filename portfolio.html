@@ -5,231 +5,70 @@
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Helvetica, Arial, sans-serif;
-            background-color: #c0c0c0;
-            overflow: hidden;
-        }
-
-        .desktop {
-            position: relative;
-            width: 100vw;
-            height: calc(100vh - 30px);
-            overflow: hidden;
-        }
-
-        .window {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .window-title {
-            background-color: #000080;
-            color: white;
-            padding: 5px 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .window-controls {
-            display: flex;
-            gap: 5px;
-        }
-
-        .window-control-btn {
-            width: 16px;
-            height: 16px;
-            background-color: #c0c0c0;
-            border: 1px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 10px;
-            line-height: 1;
-            cursor: pointer;
-        }
-
-        .window-content {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 20px;
-            scrollbar-width: thin;
-            scrollbar-color: #808080 #c0c0c0;
-        }
-
-        .window-content::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        .window-content::-webkit-scrollbar-track {
-            background: #c0c0c0;
-        }
-
-        .window-content::-webkit-scrollbar-thumb {
-            background-color: #808080;
-            border: 3px solid #c0c0c0;
-            border-radius: 6px;
-        }
-
-        .taskbar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 30px;
-            background-color: #c0c0c0;
-            border-top: 2px solid #ffffff;
-            display: flex;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .start-button {
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            padding: 2px 10px;
-            margin-left: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .start-menu {
-            position: absolute;
-            bottom: 30px;
-            left: 5px;
-            width: 200px;
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            display: none;
-        }
-
-        .start-menu.active {
-            display: block;
-        }
-
-        .start-menu-item {
-            padding: 5px 10px;
-            cursor: pointer;
-            border-bottom: 1px solid #808080;
-        }
-
-        .start-menu-item:hover {
-            background-color: #000080;
-            color: white;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .window-content {
-                padding: 10px;
-            }
-
-            .start-menu {
-                width: 150px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="site.css">
 </head>
-<body>
-    <div class="desktop">
-        <div class="window">
-            <div class="window-title">
-                <span>Portfolio</span>
-                <div class="window-controls">
-                    <div class="window-control-btn">-</div>
-                    <div class="window-control-btn">□</div>
-                    <div class="window-control-btn">x</div>
+            <body>
+                <div class="desktop">
+                    <div class="window">
+                        <div class="window-title">
+                            <span>Portfolio</span>
+                            <div class="window-controls">
+                                <div class="window-control-btn">-</div>
+                                <div class="window-control-btn">□</div>
+                                <div class="window-control-btn">x</div>
+                            </div>
+                        </div>
+                        
+                        <div class="window-content">
+                            <div class="content-container">
+                                <h1>Hey!</h1>
+                                <h4>This is my portfolio</h4>
+                                <p>
+                                    This is where I express and explore my creative side with my photography. Hope you will enjoy some of my photos, that I'm posting here.
+                                </p>
+
+                                <h4>Pictures</h4>
+                                <p>
+                                    So my portfolio is actually hosted on another website. It's powered through adobe portfolio and is accessible through this link:
+                                    <a href="https://emilmadsen.myportfolio.com/" target="_blank" rel="noopener noreferrer">https://emilmadsen.myportfolio.com/</a>.
+                                    In future, I want to add this into my own website, as it would be easier to have GitHub host my images. 
+                                    And I would have better control over it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="window-content">
-                <div class="content-container">
-                    <h1>Portfolio</h1>
-                    <h2>Hey!</h2>
-                    <h4>This is my portfolio</h4>
-                    <p>
-                        This is where I express and explore my creative side with my photography. Hope you will enjoy some of my photos, that I'm posting here.
-                    </p>
 
-                    <h4>Pictures</h4>
-                    <p>
-                        So my portfolio is actually hosted on another website. It's powered through adobe portfolio and is accessible through this link:
-                        <a href="https://emilmadsen.myportfolio.com/" target="_blank" rel="noopener noreferrer">https://emilmadsen.myportfolio.com/</a>.
-                        In future, I want to add this into my own website, as it would be easier to have GitHub host my images. 
-                        And I would have better control over it.
-                    </p>
+                <div class="taskbar">
+                    <div class="start-button" onclick="toggleStartMenu()">Start</div>
+                    <div class="start-menu" id="startMenu">
+                        <div class="start-menu-item" onclick="navigateTo('index.html')">Home</div>
+                        <div class="start-menu-item" onclick="navigateTo('about.html')">About</div>
+                        <div class="start-menu-item" onclick="navigateTo('projects.html')">Projects</div>
+                        <div class="start-menu-item" onclick="navigateTo('portfolio.html')">Portfolio</div>
+                    </div>
                 </div>
 
-                <style>
-                    .window-content {
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        text-align: left;
-                        height: 100%;
-                        padding-top: 10px;
+                <script>
+                    function toggleStartMenu() {
+                        const startMenu = document.getElementById('startMenu');
+                        startMenu.classList.toggle('active');
                     }
-                
-                    .content-container {
-                        width: 66.66%; /* Now spans 2/3 of the screen */
-                        word-wrap: break-word;
-                        margin-left: 0%; /* Starts at the left side of the screen */
+
+                    function navigateTo(page) {
+                        window.location.href = page;
+                        toggleStartMenu(); // Close menu after selection
                     }
-                </style>
 
-            </div>
-        </div>
-    </div>
-
-    <div class="taskbar">
-        <div class="start-button" onclick="toggleStartMenu()">Start</div>
-        <div class="start-menu" id="startMenu">
-            <div class="start-menu-item" onclick="navigateTo('index.html')">Home</div>
-            <div class="start-menu-item" onclick="navigateTo('about.html')">About</div>
-            <div class="start-menu-item" onclick="navigateTo('projects.html')">Projects</div>
-            <div class="start-menu-item" onclick="navigateTo('portfolio.html')">Portfolio</div>
-        </div>
-    </div>
-
-    <script>
-        function toggleStartMenu() {
-            const startMenu = document.getElementById('startMenu');
-            startMenu.classList.toggle('active');
-        }
-
-        function navigateTo(page) {
-            window.location.href = page;
-            toggleStartMenu(); // Close menu after selection
-        }
-
-        // Close start menu if clicked outside
-        document.addEventListener('click', function(event) {
-            const startMenu = document.getElementById('startMenu');
-            const startButton = document.querySelector('.start-button');
-            
-            if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
-                startMenu.classList.remove('active');
-            }
-        });
-    </script>
-</body>
+                    // Close start menu if clicked outside
+                    document.addEventListener('click', function(event) {
+                        const startMenu = document.getElementById('startMenu');
+                        const startButton = document.querySelector('.start-button');
+                        
+                        if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
+                            startMenu.classList.remove('active');
+                        }
+                    });
+                </script>
+            </body>
 </html>

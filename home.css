@@ -1,24 +1,50 @@
+:root {
+    --color-book-cloth: #cc785c;
+    --color-cactus: #bcd1ca;
+    --color-clay: #d97757;
+    --color-cloud-dark: #87867f;
+    --color-cloud-light: #d1cfc5;
+    --color-cloud-medium: #b0aea5;
+    --color-coral: #ebcece;
+    --color-dark: #0f0f0e;
+    --color-fig: #c46686;
+    --color-heather: #cbcadb;
+    --color-ivory-dark: #e8e6dc;
+    --color-ivory-light: #faf9f5;
+    --color-ivory-medium: #f0eee6;
+    --color-kraft: #d4a27f;
+    --color-lilac: #8989de;
+    --color-light: #fff;
+    --color-manilla: #ebdbbc;
+    --color-manilla-light: #f1e6d0;
+    --color-oat: #e3dacc;
+    --color-olive: #788c5d;
+    --color-sky: #6a98bc;
+    --color-slate-dark: #141413;
+    --color-slate-light: #5e5d59;
+    --color-slate-medium: #3d3d3a;
+}
+
 body {
-    background-color: #c0c0c0;
+    background-color: var(--color-ivory-light);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
 }
 
 .window {
     width: 600px;
-    background-color: #c0c0c0;
+    background-color: var(--color-oat);
     border: 2px solid;
-    border-color: #ffffff #808080 #808080 #ffffff;
+    border-color: var(--color-light) var(--color-slate-light) var(--color-slate-light) var(--color-light);
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
 .window-title {
-    background-color: #000080;
-    color: white;
+    background-color: var(--color-slate-medium);
+    color: var(--color-light);
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
@@ -34,9 +60,9 @@ body {
 .window-control-btn {
     width: 16px;
     height: 16px;
-    background-color: #c0c0c0;
+    background-color: var(--color-cloud-medium);
     border: 1px solid;
-    border-color: #ffffff #808080 #808080 #ffffff;
+    border-color: var(--color-light) var(--color-slate-light) var(--color-slate-light) var(--color-light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,12 +84,12 @@ body {
 }
 
 .menu-item {
-    background-color: #c0c0c0;
+    background-color: var(--color-cloud-light);
     border: 2px solid;
-    border-color: #ffffff #808080 #808080 #ffffff;
+    border-color: var(--color-light) var(--color-slate-light) var(--color-slate-light) var(--color-light);
     padding: 15px 25px;
     text-decoration: none;
-    color: black;
+    color: var(--color-slate-dark);
     transition: all 0.2s;
     font-weight: bold;
     flex: 1;
@@ -71,16 +97,16 @@ body {
 }
 
 .menu-item:hover {
-    border-color: #808080 #ffffff #ffffff #808080;
+    border-color: var(--color-slate-light) var(--color-light) var(--color-light) var(--color-slate-light);
     box-shadow: inset 2px 2px 3px rgba(0,0,0,0.2);
 }
 
 h1 {
-    color: black;
+    color: var(--color-slate-dark);
     margin-bottom: 10px;
 }
 
 h2 {
-    color: black;
+    color: var(--color-slate-dark);
     margin-bottom: 20px;
 }

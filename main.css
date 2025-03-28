@@ -1,11 +1,38 @@
-/* Windows 95 Monochromatic Theme */
+/* Windows 95 Anthropic Color Palette */
 :root {
-    --primary-background: #faf9f5;
-    --window-background: #f0eee6;
-    --border-light: #ffffff;
-    --border-dark: #808080;
-    --text-color: #141413;
-    --highlight-color: #000080;
+    /* Anthropic Color Variables */
+    --color-book-cloth: #cc785c;
+    --color-cactus: #bcd1ca;
+    --color-clay: #d97757;
+    --color-cloud-dark: #87867f;
+    --color-cloud-light: #d1cfc5;
+    --color-cloud-medium: #b0aea5;
+    --color-coral: #ebcece;
+    --color-dark: #0f0f0e;
+    --color-fig: #c46686;
+    --color-heather: #cbcadb;
+    --color-ivory-dark: #e8e6dc;
+    --color-ivory-light: #faf9f5;
+    --color-ivory-medium: #f0eee6;
+    --color-kraft: #d4a27f;
+    --color-lilac: #8989de;
+    --color-light: #fff;
+    --color-manilla: #ebdbbc;
+    --color-manilla-light: #f1e6d0;
+    --color-oat: #e3dacc;
+    --color-olive: #788c5d;
+    --color-sky: #6a98bc;
+    --color-slate-dark: #141413;
+    --color-slate-light: #5e5d59;
+    --color-slate-medium: #3d3d3a;
+
+    /* Theme-specific variables */
+    --primary-background: var(--color-ivory-light);
+    --window-background: var(--color-ivory-medium);
+    --border-light: var(--color-light);
+    --border-dark: var(--color-slate-light);
+    --text-color: var(--color-slate-dark);
+    --highlight-color: var(--color-sky);
 }
 
 /* Font Declarations */
@@ -17,7 +44,6 @@
     font-weight: 400;
     font-stretch: normal;
 }
-
 @font-face {
     font-family: "Copernicus";
     src: url(assets/Copernicus.woff) format("woff");
@@ -26,7 +52,6 @@
     font-weight: 400;
     font-stretch: normal;
 }
-
 @font-face {
     font-family: "Styrene";
     src: url(assets/Styrene.woff) format("woff");
@@ -70,7 +95,7 @@ h1, h2 {
 
 .window-title {
     background-color: var(--highlight-color);
-    color: white;
+    color: var(--color-light);
     padding: 5px 10px;
     font-weight: bold;
     display: flex;
@@ -91,7 +116,7 @@ h1, h2 {
 .window-control-btn {
     width: 16px;
     height: 16px;
-    background-color: var(--primary-background);
+    background-color: var(--color-cloud-medium);
     border: 1px solid;
     border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
     display: flex;
@@ -116,12 +141,12 @@ nav a {
 
 nav a:hover {
     border: 1px solid var(--border-dark);
-    background-color: var(--primary-background);
+    background-color: var(--color-cloud-light);
 }
 
 /* Buttons */
 .button {
-    background-color: var(--primary-background);
+    background-color: var(--color-cloud-light);
     border: 2px solid;
     border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
     padding: 5px 10px;
@@ -164,7 +189,7 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--primary-background);
+    background-color: var(--color-cloud-medium);
     border: 2px solid;
     border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
 }

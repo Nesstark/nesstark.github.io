@@ -1,156 +1,12 @@
 <!DOCTYPE html>
 <html lang="da-dk">
-
 <head>
     <meta charset="UTF-8">
     <title>Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            
-            background-color: #c0c0c0;
-            overflow: hidden;
-        }
-
-        .desktop {
-            position: relative;
-            width: 100vw;
-            height: calc(100vh - 30px);
-            overflow: hidden;
-        }
-
-        .window {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .window-title {
-            background-color: #000080;
-            color: white;
-            padding: 5px 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .window-controls {
-            display: flex;
-            gap: 5px;
-        }
-
-        .window-control-btn {
-            width: 16px;
-            height: 16px;
-            background-color: #c0c0c0;
-            border: 1px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 10px;
-            line-height: 1;
-            cursor: pointer;
-        }
-
-        .window-content {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 20px;
-            scrollbar-width: thin;
-            scrollbar-color: #808080 #c0c0c0;
-        }
-
-        .window-content::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        .window-content::-webkit-scrollbar-track {
-            background: #c0c0c0;
-        }
-
-        .window-content::-webkit-scrollbar-thumb {
-            background-color: #808080;
-            border: 3px solid #c0c0c0;
-            border-radius: 6px;
-        }
-
-        .taskbar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 30px;
-            background-color: #c0c0c0;
-            border-top: 2px solid #ffffff;
-            display: flex;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .start-button {
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            padding: 2px 10px;
-            margin-left: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .start-menu {
-            position: absolute;
-            bottom: 30px;
-            left: 5px;
-            width: 200px;
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #ffffff #808080 #808080 #ffffff;
-            display: none;
-        }
-
-        .start-menu.active {
-            display: block;
-        }
-
-        .start-menu-item {
-            padding: 5px 10px;
-            cursor: pointer;
-            border-bottom: 1px solid #808080;
-        }
-
-        .start-menu-item:hover {
-            background-color: #000080;
-            color: white;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .window-content {
-                padding: 10px;
-            }
-
-            .start-menu {
-                width: 150px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="site.css">
 </head>
-
 <body>
     <div class="desktop">
         <div class="window">
@@ -169,9 +25,7 @@
                     <p>These can be everything from school projects to personal projects.</p>
 
                     <div class="project-box">
-                        <h3>
-                            My personal website
-                        </h3>
+                        <h3>My personal website</h3>
                         <p>
                             So this is the current website that you are on right now. It's hosted through GitHub pages.
                             It contains all the information that I want out about myself. My CV, my projects and so on.
@@ -184,9 +38,7 @@
                     </div>
 
                     <div class="project-box">
-                        <h3>
-                            1st semester project
-                        </h3>
+                        <h3>1st semester project</h3>
                         <p>
                             This research paper explores the design of a transformational video game aimed at raising awareness about the violence faced by LGBTQ+ communities. 
                             Through an engaging and impactful narrative, the game seeks to foster empathy and understanding by immersing players in experiences reflecting real-world challenges. 
@@ -199,9 +51,7 @@
                     </div>
 
                     <div class="project-box">
-                        <h3>
-                            School project part of IP course
-                        </h3>
+                        <h3>School project part of IP course</h3>
                         <p>
                             This project was a part of the Image Processing course at Aalborg University.
                             We students were tasked with making an OpenCV Python game. It could be anything we wanted.
@@ -210,37 +60,10 @@
                         </p>
                         <h4>
                             <a href="https://github.com/Nesstark/OpenCVGame" target="_blank" rel="noopener noreferrer">
-                                OpenCVGame </a>
+                                OpenCVGame</a>
                         </h4>
                     </div>
                 </div>
-
-                <style>
-                    .window-content {
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        text-align: left;
-                        height: 100%;
-                        padding-top: 10px;
-                    }
-                
-                    .content-container {
-                        width: 66.66%; /* Now spans 2/3 of the screen */
-                        word-wrap: break-word;
-                        margin-left: 0%; /* Starts at the left side of the screen */
-                    }
-
-                    .project-box {
-                        border: 2px solid;
-                        border-color: #ffffff #808080 #808080 #ffffff;
-                        background-color: #c0c0c0;
-                        padding: 10px;
-                        margin: 10px 0;
-                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-                    }
-                </style>
-
             </div>
         </div>
     </div>
@@ -277,5 +100,4 @@
         });
     </script>
 </body>
-
 </html>
