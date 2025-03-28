@@ -8,9 +8,28 @@
     --highlight-color: #000080;
 }
 
+/* Font Declarations */
 @font-face {
-    font-family: "TiemposText";
-    src: url(assets/TiemposText.woff) format("woff");
+    font-family: "Tiempos";
+    src: url(assets/Tiempos.woff) format("woff");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Copernicus";
+    src: url(assets/Copernicus.woff) format("woff");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Styrene";
+    src: url(assets/Styrene.woff) format("woff");
     font-display: auto;
     font-style: normal;
     font-weight: 400;
@@ -19,7 +38,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Tiempos";
 }
 
 body {
@@ -28,6 +47,15 @@ body {
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+}
+
+/* Headings with Copernicus for small titles and Styrene for big headers */
+h3, h4 {
+    font-family: "Copernicus", serif;
+}
+
+h1, h2 {
+    font-family: "Styrene", sans-serif;
 }
 
 /* Window-like container */
@@ -48,6 +76,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: "Copernicus", serif;
 }
 
 .window-title-text {
@@ -98,6 +127,7 @@ nav a:hover {
     padding: 5px 10px;
     cursor: pointer;
     transition: all 0.2s;
+    font-family: "TiemposText";
 }
 
 .button:active {
@@ -119,6 +149,12 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Footnotes */
+.footnote {
+    font-family: "Styrene", sans-serif;
+    font-size: 0.8em;
 }
 
 /* Scrollbar (for that extra retro feel) */
