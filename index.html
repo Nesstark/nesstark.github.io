@@ -1,33 +1,128 @@
 <!DOCTYPE html>
-<html lang="da-dk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil Madsen</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link favicon -->
     <link rel="icon" type="image/png" href="assets\Goose.png">
 </head>
 <body>
-    <div class="window">
-        <div class="window-title">
-            <span>Welcome</span>
-            <div class="window-controls">
-                <div class="window-control-btn">-</div>
-                <div class="window-control-btn">□</div>
-                <div class="window-control-btn">x</div>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Emil<span>Madsen</span></div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <h1>Personal Website</h1>
+                <p>My personal website, build to have a great experience on both web and phone</p>
+            </section>
+
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam vitae congue nunc, nec ullamcorper metus. Aliquam eget felis ut libero laoreet bibendum.</p>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="portfolio">
+                <h2>My Projects</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/api/placeholder/300/200" alt="Project 1">
+                        </div>
+                        <div class="card-content">
+                            <h3>Project One</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet.</p>
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/api/placeholder/300/200" alt="Project 2">
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Two</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet.</p>
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/api/placeholder/300/200" alt="Project 3">
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Three</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet.</p>
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more project on top of this -->
+                    <!-- More Button -->
+                    <section id="more">
+                        <div class="more-content">
+                            <a href="projects.html" class="btn btn-large">More</a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet.</p>
+                <div class="social-icons">
+                    <a href="https://github.com/nesstark" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/emil-madsen-7400a6222/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Emil Madsen. All Rights Reserved.</p>
             </div>
         </div>
-       
-        <div class="window-content">
-            <h1>Emil Madsen</h1>
-            <h2>Medialogy Student</h2>
-           
-            <div class="menu">
-                <a href="/about.html" class="menu-item">About</a>
-                <a href="/projects.html" class="menu-item">Projects</a>
-                <a href="/portfolio.html" class="menu-item">Portfolio</a>
-            </div>
-        </div>
-    </div>
+    </footer>
+
+    <!-- Source for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,104 +1,124 @@
 <!DOCTYPE html>
-<html lang="da-dk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="site.css">
+    <title>Emil Madsen - Projects</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link favicon -->
     <link rel="icon" type="image/png" href="assets\Goose.png">
 </head>
 <body>
-    <div class="desktop">
-        <div class="window">
-            <div class="window-title">
-                <span>Projects</span>
-                <div class="window-controls">
-                    <div class="window-control-btn">-</div>
-                    <div class="window-control-btn">□</div>
-                    <div class="window-control-btn">x</div>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Emil<span>Madsen</span></div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Projects Hero Section -->
+            <section class="hero projects-hero">
+                <h1>My Projects</h1>
+                <p>Explore my latest web development and coding projects, showcasing my skills and creative problem-solving approach.</p>
+            </section>
+
+            <section id="portfolio">
+                <h2>Featured projects</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/api/placeholder/300/200" alt="Project 1">
+                        </div>
+                        <div class="card-content">
+                            <h3>Project One</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet.</p>
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/api/placeholder/300/200" alt="Project 2">
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Two</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet.</p>
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/api/placeholder/300/200" alt="Project 3">
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Three</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet.</p>
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GitHub Activity -->
+            <section id="github-activity">
+                <h2>My GitHub</h2>
+                <p>Check out my latest activity on GitHub and explore more of my projects and code.</p>
+                <div class="github-link">
+                    <a href="https://github.com/nesstark" class="btn btn-large">View My GitHub Profile</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>About Brand</h3>
+                <p>A professional web development and design agency focused on creating beautiful, functional websites.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-
-            <div class="window-content">
-                <div class="content-container">
-                    <h2>These are my projects</h2>
-                    <p>These can be everything from school projects to personal projects.</p>
-
-                    <div class="project-box">
-                        <h3>My personal website</h3>
-                        <p>
-                            So this is the current website that you are on right now. It's hosted through GitHub pages.
-                            It contains all the information that I want out about myself. My CV, my projects and so on.
-                            It's very simple coded with HTML and CSS.
-                        </p>
-                        <h4>
-                            <a href="https://github.com/Nesstark/nesstark.github.io" target="_blank" rel="noopener noreferrer">
-                                This website</a>
-                        </h4>
-                    </div>
-
-                    <div class="project-box">
-                        <h3>1st semester project</h3>
-                        <p>
-                            This research paper explores the design of a transformational video game aimed at raising awareness about the violence faced by LGBTQ+ communities. 
-                            Through an engaging and impactful narrative, the game seeks to foster empathy and understanding by immersing players in experiences reflecting real-world challenges. 
-                            This innovative project demonstrates the potential of video games as tools for social change and education.
-                        </p>
-                        <h4>
-                            <a href="https://dl.acm.org/doi/10.1145/3677525.3678658" target="_blank" rel="noopener noreferrer">
-                                A Night Out: Designing a Transformational Video Game to Promote Awareness Towards LGBTQ+ Violence</a>
-                        </h4>
-                    </div>
-
-                    <div class="project-box">
-                        <h3>School project part of IP course</h3>
-                        <p>
-                            This project was a part of the Image Processing course at Aalborg University.
-                            We students were tasked with making an OpenCV Python game. It could be anything we wanted.
-                            I chose to create this small game, where you would control a rocket with your face, with face tracking from OpenCV.
-                            You would then travel the correct distance to the exosphere with the speed of one of SpaceX's booster rockets.
-                        </p>
-                        <h4>
-                            <a href="https://github.com/Nesstark/OpenCVGame" target="_blank" rel="noopener noreferrer">
-                                OpenCVGame</a>
-                        </h4>
-                    </div>
-                </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BrandName. All Rights Reserved.</p>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div class="taskbar">
-        <div class="start-button" onclick="toggleStartMenu()">Start</div>
-        <div class="start-menu" id="startMenu">
-            <div class="start-menu-item" onclick="navigateTo('index.html')">Home</div>
-            <div class="start-menu-item" onclick="navigateTo('about.html')">About</div>
-            <div class="start-menu-item" onclick="navigateTo('projects.html')">Projects</div>
-            <div class="start-menu-item" onclick="navigateTo('portfolio.html')">Portfolio</div>
-        </div>
-    </div>
+    <!-- Source for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 
-    <script>
-        function toggleStartMenu() {
-            const startMenu = document.getElementById('startMenu');
-            startMenu.classList.toggle('active');
-        }
-
-        function navigateTo(page) {
-            window.location.href = page;
-            toggleStartMenu(); // Close menu after selection
-        }
-
-        // Close start menu if clicked outside
-        document.addEventListener('click', function(event) {
-            const startMenu = document.getElementById('startMenu');
-            const startButton = document.querySelector('.start-button');
-            
-            if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
-                startMenu.classList.remove('active');
-            }
-        });
-    </script>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>

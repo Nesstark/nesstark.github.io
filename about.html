@@ -1,78 +1,203 @@
 <!DOCTYPE html>
-<html lang="da-dk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="site.css">
+    <title>Emil Madsen - About</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link favicon -->
     <link rel="icon" type="image/png" href="assets\Goose.png">
 </head>
 <body>
-    <div class="desktop">
-        <div class="window">
-            <div class="window-title">
-                <span>About</span>
-                <div class="window-controls">
-                    <div class="window-control-btn">-</div>
-                    <div class="window-control-btn">□</div>
-                    <div class="window-control-btn">x</div>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Emil<span>Madsen</span></div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- About Hero Section -->
+            <section class="hero about-hero">
+                <h1>About Me</h1>
+                <p>Learn more about who I am, my background, and what drives my passion for technology and photography.</p>
+            </section>
+
+            <!-- Personal Bio Section -->
+            <section id="bio">
+                <h2>Who I Am</h2>
+                <div class="bio-container">
+                    <div class="bio-image">
+                        <img src="/api/placeholder/400/400" alt="Emil Madsen">
+                    </div>
+                    <div class="bio-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="projects" class="features">
+                <h2>My Experience</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">⚙️</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Present</div>
+                            <div class="timeline-content">
+                                <h3>Web Developer</h3>
+                                <h4>Company Name</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎨</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Present</div>
+                            <div class="timeline-content">
+                                <h3>Web Developer</h3>
+                                <h4>Company Name</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Present</div>
+                            <div class="timeline-content">
+                                <h3>Web Developer</h3>
+                                <h4>Company Name</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🚀</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Present</div>
+                            <div class="timeline-content">
+                                <h3>Web Developer</h3>
+                                <h4>Company Name</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <ul class="skill-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Photography</h3>
+                        <ul class="skill-list">
+                            <li>Landscape Photography</li>
+                            <li>Portrait Photography</li>
+                            <li>Adobe Lightroom</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Composition Techniques</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Other Skills</h3>
+                        <ul class="skill-list">
+                            <li>UI/UX Design</li>
+                            <li>Git & Version Control</li>
+                            <li>Project Management</li>
+                            <li>Problem Solving</li>
+                            <li>Continuous Learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Interests -->
+            <section id="interests">
+                <h2>When I'm Not Coding...</h2>
+                <div class="interests-container">
+                    <div class="interest">
+                        <div class="interest-icon">📷</div>
+                        <h3>Photography</h3>
+                        <p>Exploring nature and urban landscapes through my lens to capture unique moments and perspectives.</p>
+                    </div>
+                    <div class="interest">
+                        <div class="interest-icon">🏔️</div>
+                        <h3>Hiking</h3>
+                        <p>Discovering new trails and natural wonders, often combining my love for the outdoors with photography.</p>
+                    </div>
+                    <div class="interest">
+                        <div class="interest-icon">📚</div>
+                        <h3>Reading</h3>
+                        <p>Expanding my knowledge through books on technology, design, and science fiction.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>About Brand</h3>
+                <p>A professional web development and design agency focused on creating beautiful, functional websites.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-            
-            <div class="window-content">
-                <div class="content-container">
-                    <h1>About Me</h1>
-                    <p>I am a university student currently studying Medialogy at Aalborg University in Copenhagen. I enrolled in August 2023.</p>
-                    <p>I love watching movies and I frequently add new seen movies to my <a href="https://letterboxd.com/Nesstark/" target="_blank" rel="noopener noreferrer">Letterboxd</a>.</p>
-                    
-                    <h2>Professional Background</h2>
-                    <p>In my professional journey, I've acquired a diverse skill set, which includes proficiency in several programming languages such as C#, C++, and Python. I am skilled in game development, using both Unity and Unreal Engine.</p>
-                    
-                    <h2>Education</h2>
-                    <p>I am pursuing a degree in Medialogi at Aalborg University in Copenhagen. My academic journey is fueled by a strong desire to deepen my knowledge and expertise.</p>
-                    
-                    <h2>Personal Interests</h2>
-                    <p>Beyond the professional sphere, I have a keen interest in photography and photo editing, often spending my free time perfecting images using Adobe Lightroom. I'm also an avid video gamer and have a deep-seated passion for technology.</p>
-                    
-                    <h2>Additional Skills</h2>
-                    <p>My technical skills extend beyond programming. I'm proficient in various software tools, including Microsoft Office suite, Adobe Creative Cloud, and various game development platforms.</p>
-                    
-                    <h2>Future Aspirations</h2>
-                    <p>I aim to continue expanding my knowledge in human-machine interaction, exploring innovative ways technology can solve complex societal challenges.</p>
-                </div>
-            </div>      
-
-    <div class="taskbar">
-        <div class="start-button" onclick="toggleStartMenu()">Start</div>
-        <div class="start-menu" id="startMenu">
-            <div class="start-menu-item" onclick="navigateTo('index.html')">Home</div>
-            <div class="start-menu-item" onclick="navigateTo('about.html')">About</div>
-            <div class="start-menu-item" onclick="navigateTo('projects.html')">Projects</div>
-            <div class="start-menu-item" onclick="navigateTo('portfolio.html')">Portfolio</div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BrandName. All Rights Reserved.</p>
+            </div>
         </div>
-    </div>
+    </footer>
 
-    <script>
-        function toggleStartMenu() {
-            const startMenu = document.getElementById('startMenu');
-            startMenu.classList.toggle('active');
-        }
+    <!-- Source for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 
-        function navigateTo(page) {
-            window.location.href = page;
-            toggleStartMenu(); // Close menu after selection
-        }
-
-        // Close start menu if clicked outside
-        document.addEventListener('click', function(event) {
-            const startMenu = document.getElementById('startMenu');
-            const startButton = document.querySelector('.start-button');
-            
-            if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
-                startMenu.classList.remove('active');
-            }
-        });
-    </script>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>

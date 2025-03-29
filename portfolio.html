@@ -1,75 +1,283 @@
 <!DOCTYPE html>
-<html lang="da-dk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="site.css">
+    <title>Emil Madsen - Photography Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link favicon -->
     <link rel="icon" type="image/png" href="assets\Goose.png">
 </head>
-            <body>
-                <div class="desktop">
-                    <div class="window">
-                        <div class="window-title">
-                            <span>Portfolio</span>
-                            <div class="window-controls">
-                                <div class="window-control-btn">-</div>
-                                <div class="window-control-btn">□</div>
-                                <div class="window-control-btn">x</div>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Emil<span>Madsen</span></div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Portfolio Hero Section -->
+            <section class="hero portfolio-hero">
+                <h1>Photography Portfolio</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eget urna ultricies aliquet. Donec tincidunt, nunc id pharetra faucibus, risus mi sollicitudin dolor, a tincidunt nisi eros sed mi.</p>
+            </section>
+
+            <!-- Portfolio Categories -->
+            <section id="portfolio-categories">
+                <h2>Photography Categories</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="landscape">Landscape</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="urban">Urban</button>
+                    <button class="filter-btn" data-filter="abstract">Abstract</button>
+                </div>
+            </section>
+
+            <!-- Portfolio Gallery -->
+            <section id="portfolio-gallery">
+                <div class="gallery-grid">
+                    <!-- Landscape Photos -->
+                    <div class="gallery-item landscape">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Mountain Landscape">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Mountain Vista</h3>
+                                    <p>Landscape • 2024</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="window-content">
-                            <div class="content-container">
-                                <h1>Hey!</h1>
-                                <h4>This is my portfolio</h4>
-                                <p>
-                                    This is where I express and explore my creative side with my photography. Hope you will enjoy some of my photos, that I'm posting here.
-                                </p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Sunset Over Lake">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Golden Hour</h3>
+                                    <p>Landscape • 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Rolling Hills">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Rolling Hills</h3>
+                                    <p>Landscape • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                <h4>Pictures</h4>
-                                <p>
-                                    So my portfolio is actually hosted on another website. It's powered through adobe portfolio and is accessible through this link:
-                                    <a href="https://emilmadsen.myportfolio.com/" target="_blank" rel="noopener noreferrer">https://emilmadsen.myportfolio.com/</a>.
-                                    In future, I want to add this into my own website, as it would be easier to have GitHub host my images. 
-                                    And I would have better control over it.
-                                </p>
+                    <!-- Nature Photos -->
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Forest Detail">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Forest Depths</h3>
+                                    <p>Nature • 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Wildlife">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Morning Dew</h3>
+                                    <p>Nature • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Macro Flower">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Blooming Details</h3>
+                                    <p>Nature • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Urban Photos -->
+                    <div class="gallery-item urban">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="City Skyline">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Urban Skyline</h3>
+                                    <p>Urban • 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item urban">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Street Scene">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>City Rhythms</h3>
+                                    <p>Urban • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item urban">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Architecture">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Geometric Patterns</h3>
+                                    <p>Urban • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Abstract Photos -->
+                    <div class="gallery-item abstract">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Abstract Light">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Light Trails</h3>
+                                    <p>Abstract • 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Texture Study">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Textural Study</h3>
+                                    <p>Abstract • 2023</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="taskbar">
-                    <div class="start-button" onclick="toggleStartMenu()">Start</div>
-                    <div class="start-menu" id="startMenu">
-                        <div class="start-menu-item" onclick="navigateTo('index.html')">Home</div>
-                        <div class="start-menu-item" onclick="navigateTo('about.html')">About</div>
-                        <div class="start-menu-item" onclick="navigateTo('projects.html')">Projects</div>
-                        <div class="start-menu-item" onclick="navigateTo('portfolio.html')">Portfolio</div>
+            <!-- Photography Equipment -->
+            <section id="equipment">
+                <h2>My Equipment</h2>
+                <div class="equipment-container">
+                    <div class="equipment-item">
+                        <h3>Cameras</h3>
+                        <ul>
+                            <li>Canon EOS R5</li>
+                            <li>Sony Alpha a7 III</li>
+                            <li>DJI Pocket 2 (for video)</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-item">
+                        <h3>Lenses</h3>
+                        <ul>
+                            <li>Canon RF 24-70mm f/2.8L</li>
+                            <li>Canon RF 70-200mm f/2.8L</li>
+                            <li>Canon RF 15-35mm f/2.8L</li>
+                            <li>Sony FE 90mm f/2.8 Macro</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-item">
+                        <h3>Accessories</h3>
+                        <ul>
+                            <li>Manfrotto Tripod</li>
+                            <li>ND & Polarizing Filters</li>
+                            <li>DJI Mini 3 Pro Drone</li>
+                            <li>Godox Flash System</li>
+                        </ul>
                     </div>
                 </div>
+            </section>
 
-                <script>
-                    function toggleStartMenu() {
-                        const startMenu = document.getElementById('startMenu');
-                        startMenu.classList.toggle('active');
-                    }
+            <!-- Photography Services -->
+            <section id="photo-services">
+                <h2>Photography Services</h2>
+                <p>Interested in working together? I offer various photography services for individuals and businesses.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🌄</div>
+                        <h3>Landscape Prints</h3>
+                        <p>High-quality prints of landscape and nature photography, available in various sizes and finishes.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏙️</div>
+                        <h3>Urban Photography</h3>
+                        <p>Architectural and urban landscape photography for businesses, real estate, and personal projects.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📸</div>
+                        <h3>Custom Photo Sessions</h3>
+                        <p>Personalized photography sessions for specific projects, locations, or creative concepts.</p>
+                    </div>
+                </div>
+                <div class="service-cta">
+                    <a href="index.html#contact" class="btn btn-large">Inquire About Services</a>
+                </div>
+            </section>
+        </div>
+    </main>
 
-                    function navigateTo(page) {
-                        window.location.href = page;
-                        toggleStartMenu(); // Close menu after selection
-                    }
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>About Brand</h3>
+                <p>A professional web development and design agency focused on creating beautiful, functional websites.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BrandName. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-                    // Close start menu if clicked outside
-                    document.addEventListener('click', function(event) {
-                        const startMenu = document.getElementById('startMenu');
-                        const startButton = document.querySelector('.start-button');
-                        
-                        if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
-                            startMenu.classList.remove('active');
-                        }
-                    });
-                </script>
-            </body>
+    <!-- Source for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
 </html>
