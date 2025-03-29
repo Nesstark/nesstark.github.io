@@ -259,6 +259,8 @@ section {
     max-width: 800px;
     margin: 0 auto 2rem;
     color: var(--color-slate-medium);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .btn {
