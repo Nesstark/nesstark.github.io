@@ -122,6 +122,10 @@ a:hover {
     padding: 0 20px;
 }
 
+.bullet-item {
+    padding-left: 30px; /* Adjust as needed */
+}
+
 /* Header Styles */
 header {
     background-color: var(--color-ivory-dark);
@@ -143,11 +147,11 @@ header {
 .logo {
     font-family: "Tiempos", serif;
     font-size: 1.8rem;
-    color: var(--color-book-cloth);
+    color: var(--color-slate-dark);
 }
 
 .logo span {
-    color: var(--color-clay);
+    color: var(--color-slate-dark);
 }
 
 /* Navigation Styles */
@@ -163,7 +167,7 @@ nav ul li {
 nav ul li a {
     font-family: "Styrene", sans-serif;
     font-size: 1.1rem;
-    color: var(--color-slate-medium);
+    color: var(--color-slate-dark);
     padding: 0.5rem;
     transition: all 0.3s ease;
 }
