@@ -10,13 +10,13 @@ This project is a static website hosted on GitHub Pages. It showcases my persona
 - HTML
 - CSS
 - JavaScript
-- GitHub Pages
 
 ## Features
 
-- **Home Page**: A brief introduction and overview of who I am.
+- **Home Page**: A brief introduction and overview.
+- **About**: A short overview of who I am.
 - **Projects**: A list of my personal and professional projects with descriptions and links.
-- **Contact**: A way to reach out to me for collaboration or inquiries.
+- **Portfolio**: A page dedicated to my hobby of photography.
 
 ## Getting Started
 
