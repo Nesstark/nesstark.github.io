@@ -6,6 +6,8 @@
     <title>Emil Madsen - Portfolio</title>
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to script -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <!-- Link favicon -->
     <link rel="icon" type="image/png" href="assets\Goose.png">
 </head>
@@ -31,143 +33,13 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-
-            <!-- Portfolio Gallery -->
-            <section id="portfolio-gallery">
-                <h2>Portfolio Gallery</h2>
-                <div class="gallery-grid">
-                    <!-- Landscape Photos -->
-                    <div class="gallery-item landscape">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Mountain Landscape">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Mountain Vista</h3>
-                                    <p>Landscape • 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item landscape">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Sunset Over Lake">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Golden Hour</h3>
-                                    <p>Landscape • 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item landscape">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Rolling Hills">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Rolling Hills</h3>
-                                    <p>Landscape • 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Nature Photos -->
-                    <div class="gallery-item nature">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Forest Detail">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Forest Depths</h3>
-                                    <p>Nature • 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item nature">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Wildlife">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Morning Dew</h3>
-                                    <p>Nature • 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item nature">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Macro Flower">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Blooming Details</h3>
-                                    <p>Nature • 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Urban Photos -->
-                    <div class="gallery-item urban">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="City Skyline">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Urban Skyline</h3>
-                                    <p>Urban • 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item urban">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Street Scene">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>City Rhythms</h3>
-                                    <p>Urban • 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item urban">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Architecture">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Geometric Patterns</h3>
-                                    <p>Urban • 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Abstract Photos -->
-                    <div class="gallery-item abstract">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Abstract Light">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Light Trails</h3>
-                                    <p>Abstract • 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item abstract">
-                        <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Texture Study">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h3>Textural Study</h3>
-                                    <p>Abstract • 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <main class="gallery" id="gallery">
+            <!-- Initial images go here -->
+            <div class="grid-sizer"></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/random/400x300?sig=1" alt="" /></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/random/300x400?sig=2" alt="" /></div>
+            <div class="gallery-item"><img src="https://source.unsplash.com/random/400x400?sig=3" alt="" /></div>
+        </main>
 
             <!-- Photography Equipment -->
             <section id="equipment">

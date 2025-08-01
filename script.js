@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Hamburger menu functionality
+    // --- Hamburger menu functionality ---
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
     
@@ -58,5 +58,70 @@ document.addEventListener('DOMContentLoaded', function() {
                 li.classList.add('active');
             }
         });
+    });
+
+    // --- Masonry + Infinite Scroll setup ---
+    const grid = document.querySelector('.grid');
+    if (!grid) return; // Exit if no grid found (safe guard)
+
+    // Initialize Masonry
+    const msnry = new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        gutter: 16,
+        percentPosition: true,
+    });
+
+    // Layout Masonry after initial images loaded
+    imagesLoaded(grid, () => {
+        msnry.layout();
+    });
+
+    // Infinite scroll vars
+    let page = 1;
+    const maxPages = 5;
+    let loading = false;
+
+    function loadMoreItems() {
+        if (loading) return;
+        if (page >= maxPages) return;
+
+        loading = true;
+        page++;
+
+        const newItems = [];
+
+        for (let i = 1; i <= 6; i++) {
+            const width = 300 + Math.floor(Math.random() * 150);
+            const height = 300 + Math.floor(Math.random() * 200);
+            const seed = page * 10 + i;
+
+            const div = document.createElement('div');
+            div.classList.add('grid-item');
+
+            const img = document.createElement('img');
+            img.src = `https://picsum.photos/${width}/${height}?random=${seed}`;
+            img.alt = `Image ${seed}`;
+
+            div.appendChild(img);
+            newItems.push(div);
+        }
+
+        newItems.forEach(item => grid.appendChild(item));
+
+        imagesLoaded(grid, () => {
+            msnry.appended(newItems);
+            msnry.layout();
+            loading = false;
+        });
+    }
+
+    // Scroll listener for infinite scroll
+    window.addEventListener('scroll', () => {
+        if (loading) return;
+
+        if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 300)) {
+            loadMoreItems();
+        }
     });
 });
