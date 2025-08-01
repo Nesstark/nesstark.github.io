@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emil Madsen - Portfolio</title>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="assets/Goose.png" />
-
-    <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link favicon -->
+    <link rel="icon" type="image/png" href="assets\Goose.png">
 </head>
 <body>
     <!-- Header -->
@@ -24,10 +21,10 @@
             </button>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio-gallery">Portfolio</a></li>
-                    <li><a href="#equipment">Equipment</a></li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,11 +37,11 @@
             <!-- Portfolio Gallery -->
             <section id="portfolio-gallery">
                 <h2>Portfolio Gallery</h2>
-                <div class="grid">
-                    <!-- Example Image (Repeat for each) -->
-                    <div class="grid-item landscape">
+                <div class="gallery-grid">
+                    <!-- Landscape Photos -->
+                    <div class="gallery-item landscape">
                         <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Mountain Landscape" />
+                            <img src="/api/placeholder/600/400" alt="Mountain Landscape">
                             <div class="image-overlay">
                                 <div class="overlay-content">
                                     <h3>Mountain Vista</h3>
@@ -53,10 +50,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="grid-item landscape">
+                    <div class="gallery-item landscape">
                         <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Sunset Over Lake" />
+                            <img src="/api/placeholder/600/400" alt="Sunset Over Lake">
                             <div class="image-overlay">
                                 <div class="overlay-content">
                                     <h3>Golden Hour</h3>
@@ -65,12 +61,92 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- ... (repeat .grid-item blocks for all photos) ... -->
-
-                    <div class="grid-item abstract">
+                    <div class="gallery-item landscape">
                         <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Abstract Light" />
+                            <img src="/api/placeholder/600/400" alt="Rolling Hills">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Rolling Hills</h3>
+                                    <p>Landscape • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nature Photos -->
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Forest Detail">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Forest Depths</h3>
+                                    <p>Nature • 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Wildlife">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Morning Dew</h3>
+                                    <p>Nature • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Macro Flower">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Blooming Details</h3>
+                                    <p>Nature • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Urban Photos -->
+                    <div class="gallery-item urban">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="City Skyline">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Urban Skyline</h3>
+                                    <p>Urban • 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item urban">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Street Scene">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>City Rhythms</h3>
+                                    <p>Urban • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item urban">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Architecture">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Geometric Patterns</h3>
+                                    <p>Urban • 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Abstract Photos -->
+                    <div class="gallery-item abstract">
+                        <div class="gallery-image">
+                            <img src="/api/placeholder/600/400" alt="Abstract Light">
                             <div class="image-overlay">
                                 <div class="overlay-content">
                                     <h3>Light Trails</h3>
@@ -79,10 +155,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="grid-item abstract">
+                    <div class="gallery-item abstract">
                         <div class="gallery-image">
-                            <img src="/api/placeholder/600/400" alt="Texture Study" />
+                            <img src="/api/placeholder/600/400" alt="Texture Study">
                             <div class="image-overlay">
                                 <div class="overlay-content">
                                     <h3>Textural Study</h3>
@@ -99,27 +174,31 @@
                 <h2>My Equipment</h2>
                 <div class="equipment-container">
                     <h3>Cameras</h3>
-                    <ul class="bullet-item">
-                        <li>Canon EOS RP</li>
-                        <li>iPhone 15 Pro Max</li>
-                    </ul>
-
+                    <div class="bullet-item">
+                        <ul>
+                            <li>Canon EOS RP</li>
+                            <li>iPhone 15 Pro Max</li>
+                        </ul>
+                    </div>
                     <h3>Lenses</h3>
-                    <ul class="bullet-item">
-                        <li>Canon RF 50mm f/1.8 STM</li>
-                    </ul>
-
+                    <div class="bullet-item">
+                        <ul>
+                            <li>Canon RF 50mm f/1.8 STM</li>
+                        </ul>
+                    </div>
                     <h3>Accessories</h3>
-                    <ul class="bullet-item">
-                        <li>Røde VideoMic GO</li>
-                    </ul>
+                    <div class="bullet-item">
+                        <ul>
+                            <li>Røde VideoMic GO</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer>
         <div class="container footer-container">
             <div class="footer-section">
                 <h3>About</h3>
@@ -129,24 +208,25 @@
                     <a href="https://www.linkedin.com/in/emil-madsen-7400a6222/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio-gallery">Portfolio</a></li>
-                    <li><a href="#equipment">Equipment</a></li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
             </div>
-
             <div class="copyright">
                 <p>&copy; 2025 Emil Madsen. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Source for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
