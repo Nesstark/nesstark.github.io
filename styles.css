@@ -342,6 +342,8 @@ section {
 .card-content .btn {
   /* Ensure button stays at the bottom */
   margin-top: auto;
+  /* Prevent button from stretching full width */
+  align-self: flex-start;
 }
 
 /* Features Section */
