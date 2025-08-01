@@ -284,44 +284,64 @@ section {
 
 /* Cards */
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .card {
-    background-color: var(--color-light);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-light);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Add flexbox to make the card a flex container */
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
-    height: 200px;
-    background-color: var(--color-cactus);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 200px;
+  background-color: var(--color-cactus);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Prevent the image from shrinking */
+  flex-shrink: 0;
 }
 
 .card-img img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .card-content {
-    padding: 1.5rem;
+  padding: 1.5rem;
+  /* Make content area flexible and push button to bottom */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card-content h3 {
-    margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-content p {
+  /* Allow paragraph to grow and fill available space */
+  flex-grow: 1;
+  margin-bottom: 1rem; /* Add some space before the button */
+}
+
+.card-content .btn {
+  /* Ensure button stays at the bottom */
+  margin-top: auto;
 }
 
 /* Features Section */
