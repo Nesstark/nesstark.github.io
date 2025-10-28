@@ -7,13 +7,9 @@
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
     <!-- Link favicon -->
-    <link rel="icon" type="image/png" href="assets\Goose.png">
-    <!-- Masonry and imagesLoaded libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <link rel="icon" type="image/png" href="assets/Goose.png">
     
     <style>
-        /* Additional styles for the masonry grid */
         .portfolio-container {
             width: 100%;
             max-width: none;
@@ -23,45 +19,23 @@
         .grid {
             width: 100%;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .grid-item {
-            width: calc(25% - 15px);
-            margin-bottom: 20px;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-color: var(--color-light);
             position: relative;
-        }
-
-        .grid-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .grid-item img {
             width: 100%;
             height: auto;
             display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .grid-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: var(--color-slate-medium);
-            font-family: "Styrene", sans-serif;
-            font-size: 1.1rem;
-        }
-
-        .loading.hidden {
-            display: none;
         }
 
         .no-images {
@@ -72,33 +46,18 @@
             font-size: 1.1rem;
         }
 
-        /* Responsive adjustments for full width */
-        @media (max-width: 1200px) {
-            .grid-item {
-                width: calc(33.333% - 14px);
-            }
-        }
-
         @media (max-width: 768px) {
-            .grid-item {
-                width: calc(50% - 10px);
-            }
             .portfolio-container {
                 padding: 0 15px;
             }
         }
 
         @media (max-width: 480px) {
-            .grid-item {
-                width: 100%;
-                margin-bottom: 15px;
-            }
             .portfolio-container {
                 padding: 0 10px;
             }
         }
 
-        /* Equipment section styling */
         .equipment-container ul {
             list-style: none;
             padding-left: 0;
@@ -120,7 +79,6 @@
             font-size: 1.2rem;
         }
 
-        /* Gallery intro section */
         .gallery-intro {
             text-align: center;
             margin-bottom: 3rem;
@@ -165,45 +123,35 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Gallery Introduction -->
             <section class="gallery-intro">
                 <h2>Photography Portfolio</h2>
                 <p>Explore my collection of photographs.</p>
             </section>
 
-            <!-- Portfolio Gallery -->
             <section id="portfolio-gallery">
                 <div class="portfolio-container">
                     <div class="grid">
-                        <!-- Initial images will be loaded here by JavaScript -->
+                        <div class="no-images">No images available at the moment.</div>
                     </div>
-                    <div class="loading" id="loading">Loading more images...</div>
                 </div>
             </section>
 
-            <!-- Photography Equipment -->
             <section id="equipment">
                 <h2>My Equipment</h2>
                 <div class="equipment-container">
                     <h3>Cameras</h3>
-                    <div class="bullet-item">
-                        <ul>
-                            <li>Canon EOS RP</li>
-                            <li>iPhone 15 Pro Max</li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>Canon EOS RP</li>
+                        <li>iPhone 15 Pro Max</li>
+                    </ul>
                     <h3>Lenses</h3>
-                    <div class="bullet-item">
-                        <ul>
-                            <li>Canon RF 50mm f/1.8 STM</li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>Canon RF 50mm f/1.8 STM</li>
+                    </ul>
                     <h3>Accessories</h3>
-                    <div class="bullet-item">
-                        <ul>
-                            <li>Røde VideoMic GO</li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>Røde VideoMic GO</li>
+                    </ul>
                 </div>
             </section>
         </div>
@@ -235,196 +183,7 @@
         </div>
     </footer>
 
-    <!-- Source for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
-
-    <!-- Portfolio-specific JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Hamburger menu functionality ---
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('nav');
-            
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('open');
-                nav.classList.toggle('open');
-            });
-
-            // Close menu when clicking on a link
-            const navLinks = document.querySelectorAll('nav ul li a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    hamburger.classList.remove('open');
-                    nav.classList.remove('open');
-                });
-            });
-
-            // --- Portfolio Gallery with Local Images ---
-            const grid = document.querySelector('.grid');
-            const loadingElement = document.getElementById('loading');
-            
-            if (!grid) return;
-
-            // Initialize Masonry
-            const msnry = new Masonry(grid, {
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item',
-                gutter: 20,
-                percentPosition: true,
-                horizontalOrder: true
-            });
-
-            // Variables for loading images
-            let currentBatch = 0;
-            const imagesPerBatch = 12;
-            let allImages = [];
-            let loading = false;
-
-            // Common image extensions
-            const imageExtensions = ['jpg', 'jpeg', 'png', 'webp', 'gif', 'bmp', 'svg'];
-
-            // Function to get all images from the portfolio-images folder
-            async function loadImageList() {
-                // List of your image filenames - UPDATE THIS ARRAY WITH YOUR IMAGE NAMES
-                // You can also generate this list programmatically if you have server-side access
-                const imageFilenames = [
-                    // Add your image filenames here, for example:
-                    // 'image1.jpg',
-                    // 'image2.jpg',
-                    // 'image3.png',
-                    // 'landscape1.jpg',
-                    // 'portrait1.jpg',
-                    // etc...
-                ];
-
-                // Convert to full paths
-                allImages = imageFilenames.map(filename => `portfolio-images/${filename}`);
-                
-                // If no images are specified, show a message
-                if (allImages.length === 0) {
-                    showNoImagesMessage();
-                    return;
-                }
-
-                loadInitialImages();
-            }
-
-            
-            // function showNoImagesMessage() {
-            //    loadingElement.classList.add('hidden');
-            //    const noImagesDiv = document.createElement('div');
-            //    noImagesDiv.className = 'no-images';
-            //    noImagesDiv.innerHTML = `
-            //        <h3>No Images Found</h3>
-            //        <p>To add images to your portfolio:</p>
-            //        <ol style="text-align: left; display: inline-block; margin-top: 20px;">
-            //            <li>Create a folder named 'portfolio-images' in your website directory</li>
-            //            <li>Add your image files to this folder</li>
-            //            <li>Update the imageFilenames array in the JavaScript code with your image names</li>
-            //        </ol>
-            //    `;
-            //    grid.parentNode.insertBefore(noImagesDiv, grid.nextSibling);
-            // }
-            
-
-            function createImageElement(imagePath, index) {
-                const div = document.createElement('div');
-                div.classList.add('grid-item');
-
-                const img = document.createElement('img');
-                img.src = imagePath;
-                img.alt = `Portfolio image ${index + 1}`;
-                img.loading = 'lazy';
-                
-                // Add error handling for missing images
-                img.onerror = function() {
-                    console.warn(`Failed to load image: ${imagePath}`);
-                    div.remove();
-                };
-
-                div.appendChild(img);
-                return div;
-            }
-
-            function loadInitialImages() {
-                if (allImages.length === 0) return;
-                
-                const initialImages = allImages.slice(0, imagesPerBatch);
-                const newItems = [];
-
-                initialImages.forEach((imagePath, index) => {
-                    const item = createImageElement(imagePath, index);
-                    newItems.push(item);
-                    grid.appendChild(item);
-                });
-
-                imagesLoaded(grid, () => {
-                    msnry.appended(newItems);
-                    msnry.layout();
-                    loadingElement.classList.add('hidden');
-                    currentBatch = 1;
-                });
-            }
-
-            function loadMoreImages() {
-                if (loading) return;
-                
-                const startIndex = currentBatch * imagesPerBatch;
-                const endIndex = Math.min(startIndex + imagesPerBatch, allImages.length);
-                
-                if (startIndex >= allImages.length) {
-                    loadingElement.classList.add('hidden');
-                    return;
-                }
-
-                loading = true;
-                loadingElement.classList.remove('hidden');
-
-                const newItems = [];
-                const imagesToLoad = allImages.slice(startIndex, endIndex);
-
-                imagesToLoad.forEach((imagePath, index) => {
-                    const item = createImageElement(imagePath, startIndex + index);
-                    newItems.push(item);
-                    grid.appendChild(item);
-                });
-
-                imagesLoaded(grid, () => {
-                    msnry.appended(newItems);
-                    msnry.layout();
-                    loading = false;
-                    loadingElement.classList.add('hidden');
-                    currentBatch++;
-                });
-            }
-
-            // Load images on page load
-            loadImageList();
-
-            // Scroll listener for infinite scroll
-            let scrollTimeout;
-            window.addEventListener('scroll', () => {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    if (loading) return;
-
-                    const scrollPosition = window.innerHeight + window.pageYOffset;
-                    const documentHeight = document.body.offsetHeight;
-
-                    if (scrollPosition >= documentHeight - 800) {
-                        loadMoreImages();
-                    }
-                }, 100);
-            });
-
-            // Optional: Add click event to images for lightbox functionality
-            grid.addEventListener('click', function(e) {
-                if (e.target.tagName === 'IMG') {
-                    // You can add lightbox functionality here
-                    console.log('Image clicked:', e.target.src);
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
